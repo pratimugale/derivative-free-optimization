@@ -16,4 +16,10 @@ opt.set_function(funct)
 sum = opt.call_function(y=1, x=3)
 print(sum)
 
-opt.create_first_iteration_points()
+points = opt.create_first_iteration_points()
+x = opt.get_x_cap(points)
+print(x.print_point_value())
+
+minima = opt.train(100)
+
+print(f'Found Minima: {minima}')
